@@ -12,7 +12,6 @@ models_directory = os.path.join(os.path.dirname(__file__), 'models')
 # Load the saved model and pipeline using absolute paths
 model_path = os.path.join(models_directory, 'best_model.pkl')
 prep_pipe_path = os.path.join(models_directory, 'prep_pipe.pkl')
-capture_path=os.path.join(models_directory, 'Capture.png')
 
 # Load the model and pipeline
 with open(model_path, 'rb') as model_file:
@@ -27,8 +26,6 @@ with open(prep_pipe_path, 'rb') as prep_file:
 st.title('Customer Segmentation App')
 
 
-with open(capture_path, 'rb') as cap_file:
-    capture = pickle.load(cap_file)
 
 # Input fields for user data
 st.subheader('Input Customer Data')
