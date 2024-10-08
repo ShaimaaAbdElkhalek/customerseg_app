@@ -3,7 +3,7 @@ import pickle
 from pickle import load 
 import pandas as pd
 import numpy as np
-
+import sklearn
 import os
 
 # Define the absolute path to the models directory
