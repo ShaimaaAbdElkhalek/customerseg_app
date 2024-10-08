@@ -7,6 +7,7 @@ import numpy as np
 model = pickle.load(open('models/best_model.pkl', 'rb'))
 prep_pipe = pickle.load(open('models/prep_pipe.pkl', 'rb'))
 
+
 # Streamlit app
 st.title('Customer Segmentation App')
 
