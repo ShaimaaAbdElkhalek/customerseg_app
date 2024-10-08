@@ -11,7 +11,7 @@ prep_pipe = pickle.load(open('models/prep_pipe.pkl', 'rb'))
 # Streamlit app
 st.title('Customer Segmentation App')
 
-st.image('Capture.png', caption='Customer Segmentation', use_column_width=True)
+st.image('models/Capture.png', caption='Customer Segmentation', use_column_width=True)
 
 
 # Input fields for user data
