@@ -12,6 +12,7 @@ models_directory = os.path.join(os.path.dirname(__file__), 'models')
 # Load the saved model and pipeline using absolute paths
 model_path = os.path.join(models_directory, 'best_model.pkl')
 prep_pipe_path = os.path.join(models_directory, 'prep_pipe.pkl')
+capture_path=os.path.join(models_directory, 'Capture.png')
 
 # Load the model and pipeline
 with open(model_path, 'rb') as model_file:
@@ -20,11 +21,14 @@ with open(model_path, 'rb') as model_file:
 with open(prep_pipe_path, 'rb') as prep_file:
     prep_pipe = pickle.load(prep_file)
 
+
+
 # Streamlit app
 st.title('Customer Segmentation App')
 
-st.image('models/Capture.png', use_column_width=True)
 
+with open(apture_path, 'rb') as CAP_file:
+    model = pickle.load(CAP_file)
 
 # Input fields for user data
 st.subheader('Input Customer Data')
