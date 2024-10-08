@@ -25,7 +25,7 @@ with open(prep_pipe_path, 'rb') as prep_file:
 # Streamlit app
 st.title('Customer Segmentation App')
 
-st.image('Capture.PNG', caption='Customer Segmentation Overview', use_column_width=True)
+st.image(os.path.join(models_directory, 'Capture.PNG'), caption='Customer Segmentation Overview', use_column_width=True)
 
 
 # Input fields for user data
