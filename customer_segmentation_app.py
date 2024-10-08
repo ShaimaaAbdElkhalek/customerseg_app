@@ -4,8 +4,22 @@ from pickle import load
 import pandas as pd
 import numpy as np
 
-model = load('models/best_model.pkl')
-prep_pipe = load('models/prep_pipe.pkl')
+import os
+
+# Define the absolute path to the models directory
+models_directory = os.path.join(os.path.dirname(__file__), 'models')
+
+# Load the saved model and pipeline using absolute paths
+model_path = os.path.join(models_directory, 'best_model.pkl')
+prep_pipe_path = os.path.join(models_directory, 'prep_pipe.pkl')
+
+# Load the model and pipeline
+with open(model_path, 'rb') as model_file:
+    model = pickle.load(model_file)
+
+with open(prep_pipe_path, 'rb') as prep_file:
+    prep_pipe = pickle.load(prep_file)
+
 # Streamlit app
 st.title('Customer Segmentation App')
 
