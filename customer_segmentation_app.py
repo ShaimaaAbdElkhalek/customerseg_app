@@ -2,6 +2,10 @@ import streamlit as st
 from joblib import load
 import pandas as pd
 import numpy as np
+import os
+print(os.getcwd())  # This prints the current working directory
+print(os.listdir('models/'))  # This lists the files in the 'models/' directory
+
 
 # Load the saved model and pipeline
 model = load('models/best_model.joblib')
