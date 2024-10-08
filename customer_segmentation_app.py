@@ -8,7 +8,7 @@ prep_pipe = load('models/prep_pipe.joblib')
 # Streamlit app
 st.title('Customer Segmentation App')
 
-st.image('Capture.png', caption='Customer Segmentation', use_column_width=True)
+st.image('models/Capture.png', use_column_width=True)
 
 
 # Input fields for user data
