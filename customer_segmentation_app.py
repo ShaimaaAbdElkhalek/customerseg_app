@@ -1,11 +1,11 @@
 import streamlit as st
-import pickle
+from joblib import load
 import pandas as pd
 import numpy as np
 
 # Load the saved model and pipeline
-model = pickle.load(open('models/best_model.pkl', 'rb'))
-prep_pipe = pickle.load(open('models/prep_pipe.pkl', 'rb'))
+model = load('models/best_model.joblib')
+prep_pipe = load('models/prep_pipe.joblib')
 
 
 # Streamlit app
