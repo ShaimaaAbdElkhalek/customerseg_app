@@ -27,7 +27,7 @@ with open(prep_pipe_path, 'rb') as prep_file:
 st.title('Customer Segmentation App')
 
 
-with open(apture_path, 'rb') as CAP_file:
+with open(capture_path, 'rb') as CAP_file:
     model = pickle.load(CAP_file)
 
 # Input fields for user data
