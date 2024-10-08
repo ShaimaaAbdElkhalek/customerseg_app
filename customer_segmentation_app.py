@@ -3,8 +3,8 @@ import pickle
 import pandas as pd
 import numpy as np
 
-model = load('models/best_model.joblib')
-prep_pipe = load('models/prep_pipe.joblib')
+model = load('models/best_model.pkl')
+prep_pipe = load('models/prep_pipe.pkl')
 # Streamlit app
 st.title('Customer Segmentation App')
 
