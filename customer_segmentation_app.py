@@ -1,21 +1,14 @@
 import streamlit as st
-from joblib import load
+import pickle
 import pandas as pd
 import numpy as np
-import os
-print(os.getcwd())  # This prints the current working directory
-print(os.listdir('models/'))  # This lists the files in the 'models/' directory
 
-
-# Load the saved model and pipeline
 model = load('models/best_model.joblib')
 prep_pipe = load('models/prep_pipe.joblib')
-
-
 # Streamlit app
 st.title('Customer Segmentation App')
 
-st.image('models/Capture.png', caption='Customer Segmentation', use_column_width=True)
+st.image('Capture.png', caption='Customer Segmentation', use_column_width=True)
 
 
 # Input fields for user data
