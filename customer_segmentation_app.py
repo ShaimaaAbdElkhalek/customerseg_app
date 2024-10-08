@@ -4,8 +4,9 @@ import pandas as pd
 import numpy as np
 
 # Load the saved model and pipeline
-model = pickle.load(open('best_model.pkl', 'rb')) 
-prep_pipe = pickle.load(open('prep_pipe.pkl', 'rb')) 
+model = pickle.load(open('models/best_model.pkl', 'rb'))
+prep_pipe = pickle.load(open('models/prep_pipe.pkl', 'rb'))
+
 # Streamlit app
 st.title('Customer Segmentation App')
 
